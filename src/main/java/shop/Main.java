@@ -211,7 +211,6 @@ public class Main {
     public static Map<String,Double> getCategoriesWithTotalValues(Product[] products) {
         Map<String, Double> productCategoriesWithTotalValues = new HashMap<>();
         for (Product product : products) {
-            String category = product.getCategory();
             Double value = product.getPrice();
             if(productCategoriesWithTotalValues.containsKey(product.getCategory())) {
                 value += productCategoriesWithTotalValues.get(product.getCategory());
@@ -260,6 +259,6 @@ public class Main {
         User[] furthestLivingUsers = furthestLivingUsers(users);
         Map<String,Double> productCategoriesWithTotalValues = getCategoriesWithTotalValues(products);
 
-        System.out.println(getHighestCartValue(products,carts,users));
+
     }
 }
